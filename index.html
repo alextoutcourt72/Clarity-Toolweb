@@ -30,10 +30,14 @@
             box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
             pointer-events: none;
         }
+
+        .w-full {
+            background-image: linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, rgba(149, 131, 198, 0.6) 40.83%, rgba(149, 131, 198, 0.3) 65.57%, rgba(149, 131, 198, 0) 107.92%);
+        }
     </style>
 </head>
 <html>
-<body class="bg-black grid-background">  
+<body class="bg-black grid-background relative">  
     <div class="vignette"></div>
     <div class="flex flex-col items-center justify-center min-h-screen px-4 py-8">
         <h1 class="text-white text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6">Clarity Tool</h1>
@@ -44,24 +48,124 @@
         </a>
     </div>
 
-    <footer class="fixed bottom-0 left-0 right-0 shadow">
-        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-            <span class="text-xs sm:text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">ClarityTool™</a>. Tous droits réservés.</span>
-            <ul class="flex flex-wrap items-center mt-3 text-xs sm:text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-                <li>
-                    <a href="#" class="hover:underline me-2 sm:me-4 md:me-6">À propos</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline me-2 sm:me-4 md:me-6">Politique de confidentialité</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline me-2 sm:me-4 md:me-6">Licence</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">Contact</a>
-                </li>
-            </ul>
+    <div class=" w-full h-px max-w-6xl mx-auto my-20">
+</div>
+
+    <div>
+        <h1 class="text-white text-center font-bold lg:text-4xl">Pourquoi Clairty ?</h1>
+
+<div class="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
+            <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border "
+                style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
+                <img src="img/python-logo.png" class="h-10 w-10">
+            </div>
+            <h3 class="mt-6 text-gray-400">Python</h3>
+            <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
+                L'outil a été developé entierement en python
+            </p>
         </div>
-    </footer>
+
+        <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
+            <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border "
+                style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
+                <img src="img/711284.png" class="h-10 w-10">
+            </div>
+            <h3 class="mt-6 text-gray-400">Open-source</h3>
+            <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
+                L'outil et totalement open-source
+            </p>
+        </div>
+
+        <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
+            <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border "
+                style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
+                <img src="img/image.png" class="h-10 w-10">
+            </div>
+            <h3 class="mt-6 text-gray-400">100% Gratuit</h3>
+            <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
+                L'outil est totalement gratuit pas de frais pas de version premium
+            </p>
+        </div>
+</div>
+
+<div class=" w-full h-px max-w-6xl mx-auto my-20"
+style="background-image: linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, rgba(149, 131, 198, 0.6) 40.83%, rgba(149, 131, 198, 0.3) 65.57%, rgba(149, 131, 198, 0) 107.92%);">
+</div>
+
+<div>
+    <h1 class="text-white text-center font-bold lg:text-4xl">Statistiques</h1>
+</div>
+
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div class="text-center md:border-r text-white">
+            <h6 id="downloads" class="text-4xl font-bold lg:text-5xl xl:text-6xl"></h6>
+            <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
+                star
+            </p>
+        </div>
+        <div class="text-center md:border-r text-white">
+            <h6 id="subscribers" class="text-4xl font-bold lg:text-5xl xl:text-6xl"></h6>
+            <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
+                Abonnés
+            </p>
+        </div>
+        <div class="text-center md:border-r text-white">
+            <h6 id="users" class="text-4xl font-bold lg:text-5xl xl:text-6xl"></h6>
+            <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
+                watchers
+            </p>
+        </div>
+        <div class="text-center text-white">
+            <h6 id="cookies" class="text-4xl font-bold lg:text-5xl xl:text-6xl"></h6>
+            <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
+                fork
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    fetch(`https://api.github.com/repos/alextoutcourt72/Clarity-Tool`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('downloads').textContent = data.stargazers_count;
+            document.getElementById('subscribers').textContent = data.subscribers_count;
+            document.getElementById('users').textContent = data.watchers_count;
+            document.getElementById('cookies').textContent = data.forks_count;
+        })
+        .catch(error => console.error('Erreur lors de la récupération des statistiques:', error));
+</script>
+
+<div class="text-white text-center font-bold lg:text-4xl">Collaborateurs</div>
+
+<div id="contributors" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto my-20">
+</div>
+<script>
+  fetch(`https://api.github.com/repos/alextoutcourt72/Clarity-Tool/contributors`)
+    .then(response => response.json())
+    .then(data => {
+      const contributors = data.sort((a, b) => b.contributions - a.contributions);
+      const contributorsHtml = contributors.map(contributor => {
+        return `
+          <a href="${contributor.html_url}" target="_blank" rel="noopener noreferrer">
+            <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow hover:scale-105 transition ease-in-out duration-300">
+              <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border "
+                style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
+                <img src="${contributor.avatar_url}" class="h-10 w-10">
+              </div>
+              <h3 class="mt-6 text-white font-bold">${contributor.login}</h3>
+              <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
+                ${contributor.contributions} commits
+              </p>
+            </div>
+          </a>
+        `;
+      }).join('');
+      document.getElementById('contributors').innerHTML = contributorsHtml;
+    })
+    .catch(error => console.error('Erreur lors de la récupération des contributeurs:', error));
+</script>
+
 </body>
 </html>
