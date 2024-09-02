@@ -13,14 +13,6 @@
             background-size: 80px 80px;
             animation: gridMove 20s linear infinite;
         }
-        @keyframes gridMove {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 80px 80px;
-            }
-        }
         .vignette {
             position: fixed;
             top: 0;
@@ -30,32 +22,75 @@
             box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
             pointer-events: none;
         }
-
-        .w-full {
-            background-image: linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, rgba(149, 131, 198, 0.6) 40.83%, rgba(149, 131, 198, 0.3) 65.57%, rgba(149, 131, 198, 0) 107.92%);
+        .animate-opacity {
+            animation: opacityAnimation 1s ease 0s;
+        }
+        @keyframes opacityAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .animate-slide {
+            animation: slideAnimation 1s ease 0s;
+        }
+        @keyframes slideAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-from-bottom {
+            animation: fromBottomAnimation 1s ease 0s;
+        }
+        @keyframes fromBottomAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes gridMove {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 80px 80px;
+            }
         }
     </style>
 </head>
 <html>
-<body class="bg-black grid-background relative">  
+<body class="bg-black grid-background relative animate-opacity animate-from-bottom">
+
     <div class="vignette"></div>
     <div class="flex flex-col items-center justify-center min-h-screen px-4 py-8">
         <h1 class="text-white text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6">Clarity Tool</h1>
-        <h2 class="text-white text-center opacity-60 text-lg sm:text-xl md:text-2xl max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl mb-6 sm:mb-8 md:mb-10">La bibliothèque open-source la plus smart et oui c'est génial non ?</h2>
-        <a href="https://github.com/alextoutcourt72/Clarity-Tool" class="bg-white rounded-full py-2 px-6 sm:py-3 sm:px-8 font-semibold flex items-center text-base sm:text-lg hover:bg-gray-200 transition-colors duration-300">
-            <img class="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" src="img/github-mark.svg" alt="Logo GitHub">
-            <span>GitHub</span>
-        </a>
+        <h2 class="text-neutral-700 text-center text-lg sm:text-xl md:text-2xl max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl mb-6 sm:mb-8 md:mb-10">La bibliothèque open-source la plus smart et oui c'est génial non ?</h2>
+        <div class="flex flex-row -mt-6">
+            <a href="https://github.com/alextoutcourt72/Clarity-Tool"><img src="img/github-142-svgrepo-com.svg" class="mr-3 hover:scale-110 transition ease-in-out duration-300"></a>
+            <a href="https://discord.gg/qFJ7dNZ5Sf"><img src="img/discord-svgrepo-com.svg" class="hover:scale-110 transition ease-in-out duration-300 -mt-1"></a>
+        </div>
     </div>
-
-    <div class=" w-full h-px max-w-6xl mx-auto my-20">
+    
 </div>
-
+<div class=" w-full h-px max-w-6xl mx-auto my-20"
+style="background-image: linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, rgba(71, 71, 71, 0.6) 40.83%, rgba(73, 73, 73, 0.3) 65.57%, rgba(149, 131, 198, 0) 107.92%);">
+</div>
     <div>
         <h1 class="text-white text-center font-bold lg:text-4xl">Pourquoi Clairty ?</h1>
 
 <div class="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
+        <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow animate-slide">
             <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border "
                 style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
                 <img src="img/python-logo.png" class="h-10 w-10">
@@ -66,7 +101,7 @@
             </p>
         </div>
 
-        <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
+        <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow animate-slide">
             <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border "
                 style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
                 <img src="img/711284.png" class="h-10 w-10">
@@ -77,7 +112,7 @@
             </p>
         </div>
 
-        <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
+        <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow animate-slide">
             <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border "
                 style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
                 <img src="img/image.png" class="h-10 w-10">
@@ -89,35 +124,34 @@
         </div>
 </div>
 
-<div class=" w-full h-px max-w-6xl mx-auto my-20"
-style="background-image: linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, rgba(149, 131, 198, 0.6) 40.83%, rgba(149, 131, 198, 0.3) 65.57%, rgba(149, 131, 198, 0) 107.92%);">
-</div>
-
 <div>
+        <div class=" w-full h-px max-w-6xl mx-auto my-20"
+        style="background-image: linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, rgba(71, 71, 71, 0.6) 40.83%, rgba(73, 73, 73, 0.3) 65.57%, rgba(149, 131, 198, 0) 107.92%);">
+        </div>
     <h1 class="text-white text-center font-bold lg:text-4xl">Statistiques</h1>
 </div>
 
 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
-        <div class="text-center md:border-r text-white">
+        <div class="text-center md:border-r text-white animate-slide">
             <h6 id="downloads" class="text-4xl font-bold lg:text-5xl xl:text-6xl"></h6>
             <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
                 star
             </p>
         </div>
-        <div class="text-center md:border-r text-white">
+        <div class="text-center md:border-r text-white animate-slide">
             <h6 id="subscribers" class="text-4xl font-bold lg:text-5xl xl:text-6xl"></h6>
             <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
-                Abonnés
+                watchers
             </p>
         </div>
-        <div class="text-center md:border-r text-white">
+        <div class="text-center md:border-r text-white animate-slide">
             <h6 id="users" class="text-4xl font-bold lg:text-5xl xl:text-6xl"></h6>
             <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
                 watchers
             </p>
         </div>
-        <div class="text-center text-white">
+        <div class="text-center text-white animate-slide">
             <h6 id="cookies" class="text-4xl font-bold lg:text-5xl xl:text-6xl"></h6>
             <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
                 fork
@@ -148,7 +182,7 @@ style="background-image: linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, rg
       const contributors = data.sort((a, b) => b.contributions - a.contributions);
       const contributorsHtml = contributors.map(contributor => {
         return `
-          <a href="${contributor.html_url}" target="_blank" rel="noopener noreferrer">
+          <a href="${contributor.html_url}" target="_blank" rel="noopener noreferrer" class="animate-slide">
             <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow hover:scale-105 transition ease-in-out duration-300">
               <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border "
                 style="background-image: linear-gradient(rgb(80, 70, 229) 0%, rgb(43, 49, 203) 100%); border-color: rgb(93, 79, 240);">
@@ -167,5 +201,19 @@ style="background-image: linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, rg
     .catch(error => console.error('Erreur lors de la récupération des contributeurs:', error));
 </script>
 
+<div class="text-center">
+    <div class=" w-full h-px max-w-6xl mx-auto my-20"
+    style="background-image: linear-gradient(90deg, rgba(149, 131, 198, 0) 1.46%, rgba(71, 71, 71, 0.6) 40.83%, rgba(73, 73, 73, 0.3) 65.57%, rgba(149, 131, 198, 0) 107.92%);">
+    </div>
+    <span class="block text-sm font-semibold text-center text-gray-500">© 2021-2022 Clarity-Tool™. All Rights Reserved.
+		Built with 
+        <a href=""
+			class="text-purple-600 hover:underline">HTML</a> and 
+            <a
+			href="https://tailwindcss.com" class="text-purple-600 hover:underline">Tailwind
+			CSS
+        </a>.
+	</span>
+</div>
 </body>
 </html>
